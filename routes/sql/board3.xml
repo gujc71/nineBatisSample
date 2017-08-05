@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<query>
+    <sql id="includeWhere">
+        WHERE BRDNO=${brdno}
+    </sql>
+
+    <select id="selectBoardList">
+        SELECT BRDNO, BRDTITLE, BRDWRITER, DATE_FORMAT(BRDDATE,'%Y-%m-%d') BRDDATE
+          FROM TBL_BOARD
+         ORDER BY BRDNO DESC          
+    </select>
+    
+    <select id="selectBoardOne">
+        SELECT BRDNO, BRDTITLE, BRDMEMO, BRDWRITER, DATE_FORMAT(BRDDATE,'%Y-%m-%d') BRDDATE
+          FROM TBL_BOARD
+          {include refid="includeWhere"}
+    </select>
+    
+    <update id="updateBoard">
+        UPDATE TBL_BOARD
+           SET BRDTITLE=#{brdtitle}, BRDMEMO=#{brdmemo}, BRDWRITER=#{brdwriter}
+          {include refid="includeWhere"}
+    </update>
+    
+    <insert id="insertBoard">
+        INSERT INTO TBL_BOARD(BRDTITLE, BRDMEMO, BRDWRITER, BRDDATE)
+        VALUES (#{brdtitle}, #{brdmemo}, #{brdwriter}, NOW())
+    </insert>
+    
+    <delete id="deleteBoard">
+        DELETE FROM TBL_BOARD
+          {include refid="includeWhere"}
+    </delete>
+    
+</query>

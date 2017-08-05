@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<query>
+    <select id="selectBoardList5">
+        SELECT BRDNO, BRDTITLE, BRDWRITER, DATE_FORMAT(BRDDATE,'%Y-%m-%d') BRDDATE
+          FROM TBL_BOARD
+            @{if test="$cnt > 0"}
+             WHERE BRDNO &lt; ${brdno}
+             ORDER BY BRDNO DESC
+             LIMIT ${cnt}
+          {/if}
+            @{if test="$cnt === 0 || $cnt === undefined"}
+             ORDER BY BRDNO DESC
+          {/if}          
+    </select>
+</query>
