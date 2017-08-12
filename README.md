@@ -6,5 +6,6 @@ NineBatis helps you create and manage SQL easily in Node.js like Mybatis.
 
 
 
-#License#
+# License #
+
 MIT
