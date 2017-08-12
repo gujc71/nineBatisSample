@@ -9,9 +9,9 @@ This project is an example of how to use nineBatis (9Batis) based on Node.js (ex
 
 # Run #
 
-> git https://github.com/gujc71/nineBatisSample.git
-> npm install
-> npm start
+    > git https://github.com/gujc71/nineBatisSample.git
+    > npm install
+    > npm start
 
 # License #
 
