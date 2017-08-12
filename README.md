@@ -1,4 +1,4 @@
-# nineBatis(ORM for Node.js) sample
+# nineBatis(sql mapper for Node.js) sample
 
 
 Java에서 많이 사용되는 Mybatis를
