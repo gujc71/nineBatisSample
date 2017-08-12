@@ -1,8 +1,10 @@
 # nineBatis(sql mapper for Node.js) sample
 
+NineBatis is a library with support for custom SQL and advanced mappings. 
 
-Java에서 많이 사용되는 Mybatis를
+NineBatis helps you create and manage SQL easily in Node.js like Mybatis.
 
-Node.js용으로 구현한 nineBatis의 
 
-사용법을 정리한 예제 프로젝트 입니다.
+
+#License#
+MIT
